@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ plant|capitalize }} Disease Detection</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="plant-bg">
+
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <h1>{{ plant|capitalize }} Disease Detection</h1>
+            <p>Upload a leaf image to identify the disease</p>
+        </header>
+
+        <hr>
+
+        <!-- Upload Section -->
+        <section class="upload-section">
+            <form method="POST"
+                  action="{{ url_for('predict', plant_name=plant) }}"
+                  enctype="multipart/form-data">
+
+                <input type="file" name="file" accept="image/*" required>
+                <br><br>
+                <button type="submit">Predict Disease</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Uploaded Image -->
+        {% if img_path %}
+        <section class="image-preview">
+            <h3>Uploaded Image</h3>
+            <img src="{{ url_for('static', filename=img_path) }}"
+                 alt="Uploaded Image"
+                 width="300">
+        </section>
+        {% endif %}
+
+        <!-- Error Message -->
+        {% if error %}
+        <section class="error-section">
+            <h3 style="color:red;">{{ error }}</h3>
+        </section>
+        {% endif %}
+
+        <!-- Prediction Result -->
+        {% if result %}
+        <section class="result-section">
+            <h2>Disease Detected: {{ result }}</h2>
+            <h3>Confidence Level: {{ confidence }}%</h3>
+
+            <h3>Recommended Solution:</h3>
+            <p>{{ solution }}</p>
+        </section>
+        {% endif %}
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>AI-Based Smart Crop Monitoring System</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

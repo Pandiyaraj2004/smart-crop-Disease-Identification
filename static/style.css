@@ -1,0 +1,326 @@
+/* ===============================
+   SMART CROP DISEASE PREDICTION
+   Professional UI Design
+================================ */
+
+/* ===============================
+   NAVIGATION BAR
+================================ */
+
+.navbar {
+    width: 100%;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #28a745;
+}
+
+.nav-profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f5f5fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.profile-circle:hover {
+    transform: scale(1.1);
+    background: #218838;
+}
+
+/* ===============================
+   FIX FOR CONTENT HIDING BEHIND NAVBAR
+================================ */
+
+body {
+    padding-top: 80px; /* same as navbar height + some margin */
+}
+
+/* ===============================
+   INDEX PAGE BACKGROUND
+================================ */
+
+.index-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
+}
+
+
+/* Project Info Section */
+.project-info {
+    margin-top: 30px;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.project-info h2 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Center Start Button */
+.start-btn-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.start-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    background: #28a745;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.start-btn:hover {
+    background: #218838;
+    transform: scale(1.08);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* change from center to flex-start */
+}
+
+/* Home Background */
+.home-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef");
+}
+
+/* Plant Page Background */
+.plant-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1464226184884-fa280b87c399");
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 40px;
+    color: #fff;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+/* ===============================
+   HOME PAGE GRID
+================================ */
+
+.plant-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.plant-card {
+    background: rgba(255,255,255,0.15);
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.plant-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255,255,255,0.25);
+}
+
+.plant-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.plant-card h3 {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.plant-link {
+    text-decoration: none;
+    color: white;
+}
+
+/* ===============================
+   PLANT PAGE
+================================ */
+
+.upload-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+input[type="file"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: none;
+    background: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* ===============================
+   IMAGE PREVIEW (CENTERED)
+================================ */
+
+.image-preview {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.image-preview img {
+    display: block;
+    margin: 20px auto;
+    width: 320px;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+
+/* ===============================
+   RESULT SECTION (CENTERED CARD)
+================================ */
+
+.result-section {
+    margin: 40px auto;
+    padding: 30px;
+    width: 70%;
+    max-width: 650px;
+    text-align: center;
+    background: rgba(0, 128, 0, 0.35);
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.5);
+}
+
+.result-section h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.result-section h3 {
+    margin: 10px 0;
+}
+
+.result-section p {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* ===============================
+   ERROR SECTION (CENTERED)  hay i havea new idea first page is shown all information about the page this page name is index.html this page contain all info about this project next click the gets
+================================ */
+
+.error-section {
+    margin: 30px auto;
+    padding: 20px;
+    width: 60%;
+    max-width: 500px;
+    text-align: center;
+    background: rgba(255, 0, 0, 0.5);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Crop Disease Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="index-bg">
+
+    <!-- =========================
+         NAVIGATION BAR
+    ========================== -->
+    <nav class="navbar">
+
+        <!-- Logo -->
+        <div class="nav-logo">
+            🌾 SmartCrop AI
+        </div>
+
+        <!-- Menu Links -->
+        <ul class="nav-menu">
+
+        </ul>
+
+        <!-- Right Side Round Icon -->
+        <div class="nav-profile">
+            <div class="profile-circle">
+                🌱
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <div class="container">
+
+        <header class="header">
+            <h1>AI-Powered Smart Crop Disease Prediction System</h1>
+            <p class="subtitle">
+                An intelligent system that detects crop diseases using Deep Learning and Image Processing
+            </p>
+        </header>
+
+        <section class="project-info">
+
+            <h2>🌾 About the Project</h2>
+            <p>
+                This system uses Artificial Intelligence to analyze crop leaf images
+                and accurately predict plant diseases. It helps farmers detect
+                infections early and take preventive action.
+            </p>
+
+            <h2>🧠 Technologies Used</h2>
+            <ul>
+                <li>Deep Learning (CNN)</li>
+                <li>TensorFlow / Keras (.h5 Models)</li>
+                <li>Flask Web Framework</li>
+                <li>Image Processing</li>
+            </ul>
+
+            <h2>🎯 Project Objective</h2>
+            <p>
+                To provide a smart and automated solution for early crop disease
+                detection and improve agricultural productivity.
+            </p>
+
+        </section>
+
+        <!-- CENTER BUTTON -->
+        <div class="start-btn-container">
+            <a href="{{ url_for('home') }}" class="start-btn">
+                🚀 Predict Crop Disease
+            </a>
+        </div>
+
+        <footer class="footer">
+            <p>© 2026 | AI Smart Agriculture Monitoring System</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

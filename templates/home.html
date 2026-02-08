@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Crop Disease Detection</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
+</head>
+
+<body class="home-bg">
+
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Smart Crop Disease Detection System</h1>
+            <p class="subtitle">Select a crop below to identify possible diseases</p>
+        </header>
+
+        <!-- Plant Grid Section -->
+        <main class="plant-section">
+            <div class="plant-container">
+
+                {% for plant in plants %}
+                <div class="plant-card">
+
+                    <a href="{{ url_for('plant_page', plant_name=plant) }}" class="plant-link">
+
+                        <div class="plant-image">
+                            <img
+                                src="{{ url_for('static', filename='images/' + plant + '.jpg') }}"
+                                alt="{{ plant }} image">
+                        </div>
+
+                        <div class="plant-name">
+                            <h3>{{ plant|capitalize }}</h3>
+                        </div>
+
+                    </a>
+
+                </div>
+                {% endfor %}
+
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>© 2026 Smart Crop Disease Detection | Powered by AI</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
